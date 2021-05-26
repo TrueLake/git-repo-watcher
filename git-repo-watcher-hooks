@@ -4,6 +4,8 @@
 # $2 - Branch name
 startup() {
     echo "Watch started: $*"
+    docker-compose up --project-directory "/root/Backend/docker-compose.yml"
+
 }
 
 # $1 - Git repository name
