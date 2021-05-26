@@ -4,7 +4,7 @@
 # $2 - Branch name
 startup() {
     echo "Watch started: $*"
-    docker-compose up --project-directory "/root/Backend/docker-compose.yml"
+    docker-compose up --project-directory "/root/Backend/"
 
 }
 
@@ -20,7 +20,7 @@ no_changes() {
 change_pulled() {
     echo "Changes pulled: $*"
     echo "Restarting docker-compose for: $@"
-    docker-compose restart --project-directory "/root/Backend/docker-compose.yml"
+    docker-compose restart --project-directory "/root/Backend/"
 }
 
 # $1 - Git repository name
