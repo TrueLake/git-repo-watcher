@@ -103,6 +103,13 @@ pull_change() {
         hook "change_pulled" "$1" "$2" "$(printf '%q\n' "$commit_message")"
     fi
 }
+# $1 - Git repository name
+# $2 - Branch name
+# $3 - Commit details
+change_pulled() {
+    echo "Restarting docker-compose for: $@"
+    docker-compose restart --project-directory "~/Backend/docker-compose.yml"
+}
 
 while true; do
 
