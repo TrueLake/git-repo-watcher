@@ -18,7 +18,7 @@ no_changes() {
 change_pulled() {
     echo "Changes pulled: $*"
     echo "Restarting docker-compose for: $@"
-    docker-compose restart --project-directory "~/Backend/docker-compose.yml"
+    docker-compose restart --project-directory "root/Backend/docker-compose.yml"
 }
 
 # $1 - Git repository name
