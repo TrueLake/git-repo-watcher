@@ -4,7 +4,7 @@
 # $2 - Branch name
 startup() {
     echo "Watch started: $*"
-    docker-compose --project-directory "/root/Backend/" up
+    docker-compose --project-directory "/root/Backend/" up 
 
 }
 
