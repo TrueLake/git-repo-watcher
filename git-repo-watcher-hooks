@@ -4,7 +4,7 @@
 # $2 - Branch name
 startup() {
     echo "Watch started: $*"
-    docker-compose up  --project-directory "/root/Backend/" --force-recreate
+    docker-compose  --project-directory "/root/Backend/" up  --force-recreate
 
 }
 
@@ -20,7 +20,7 @@ no_changes() {
 change_pulled() {
     echo "Changes pulled: $*"
     echo "Restarting docker-compose for: $@"
-    docker-compose restart--project-directory "/root/Backend/"  --force-recreate
+    docker-compose --project-directory "/root/Backend/"  restart --force-recreate
 }
 
 # $1 - Git repository name
