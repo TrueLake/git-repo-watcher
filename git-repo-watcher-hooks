@@ -4,7 +4,7 @@
 # $2 - Branch name
 startup() {
     echo "Watch started: $*"
-    nohup docker-compose --project-directory "/root/Backend/" up  --force-recreate > ./truelake.out 2> ./truelake.err &
+    nohup docker-compose --project-directory "/root/Backend/" up  --force-recreate > truelake.out 2> truelake.err &
 
 }
 
